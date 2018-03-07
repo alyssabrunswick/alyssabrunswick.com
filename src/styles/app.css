@@ -1,0 +1,7 @@
+:root {
+  --yellow: #bada55; }
+
+body {
+  width: 1vh;
+  height: 1vh;
+  background-color: var(--yellow); }
