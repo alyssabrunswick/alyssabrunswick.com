@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import './styles/app.css';
 
-class App extends Component {
+class Portfolio extends Component {
   render() {
     return (
-      <section>
+      <div className="portfolio">
         <Header />
-        <h1>Alyssa Brunswick</h1>
+        <h1>PORTFOLIO</h1>
         <Footer />
-      </section>
+      </div>
     );
   }
 }
 
-export default App;
+export default Portfolio;
