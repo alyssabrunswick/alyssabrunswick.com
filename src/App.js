@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import 'normalize.css';
 import './styles/app.css';
+
+// MY COMPONENTS
+import SiteRouter from './components/router';
 
 class App extends Component {
   render() {
-    return (
-      <div className="app">
-        <header className="header">
-          <h1 className="title">AB</h1>
-        </header>
-      </div>
-    );
+    return <SiteRouter />;
   }
 }
 

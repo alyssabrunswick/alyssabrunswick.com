@@ -1,9 +1,106 @@
 :root {
-  --yellow: #bada55;
+  --gray: #222222;
+  --darkblue: #86a59c;
+  --lightblue: #bececb;
+  --darkorange: #dd8c6d;
+  --lightorange: #e0b0a2;
+  --darkyellow: #dcb667;
+  --lightyellow: #f2e986;
+  --darkpurple: #aca0bc;
+  --lightpurple: #ccc0d8;
+  --rainbow: linear-gradient(
+    0.25turn,
+    var(--darkblue),
+    var(--lightblue),
+    var(--darkorange),
+    var(--lightorange),
+    var(--darkyellow),
+    var(--lightyellow),
+    var(--darkpurple),
+    var(--lightpurple)
+  );
+  @import url('https://fonts.googleapis.com/css?family=Pompiere|Roboto+Condensed|Yeseva+One');
 }
 
 body {
-  width: 1vh;
-  height: 1vh;
-  background-color: var(--yellow);
+  background-color: var(--gray);
+  color: white;
+  font-family: Pompiere;
+  font-size: calc(16px + 1vw);
+  line-height: calc(1.1em + 0.5vw);
+}
+
+.page {
+  display: grid;
+  grid-template-areas:
+    'head'
+    'main'
+    'footer';
+  grid-template-rows: 0.5fr minmax(min-content, 85vh) 0.5fr;
+  grid-template-columns:
+    [full-start] minmax(1em, 1fr) [contents-start] minmax(0, 40em)
+    [contents-end] minmax(1em, 1fr) [full-end];
+}
+
+.page > * {
+  grid-column: contents;
+}
+
+.full {
+  grid-column: full;
+}
+header {
+  grid-area: head;
+  display: grid;
+  grid-template-areas:
+    'logo'
+    'nav';
+}
+
+.logo {
+  grid-area: logo;
+}
+
+nav {
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  font-size: calc(12px + 1vh);
+  grid-area: nav;
+  text-transform: uppercase;
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-between;
+  }
+  li {
+    padding: 0.5rem 1rem;
+    background-color: var(--gray);
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+footer {
+  grid-area: footer;
+  background: var(--rainbow);
+}
+
+header,
+footer {
+  padding: 2rem 2rem 1rem;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+}
+
+@media (min-width: 650px) {
+  header {
+    grid-template-areas: 'logo logo logo logo nav nav';
+  }
 }
