@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import base from '../base';
 import 'normalize.css';
 import './styles/app.css';
 

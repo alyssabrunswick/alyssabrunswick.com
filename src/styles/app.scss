@@ -20,14 +20,22 @@
     var(--lightpurple)
   );
   @import url('https://fonts.googleapis.com/css?family=Pompiere|Roboto+Condensed|Yeseva+One');
+  --fancyfont: Pompiere, Arial, Helvetica, sans-serif;
+  --regularfont: 'Roboto Condensed', Arial, Helvetica, sans-serif;
 }
 
 body {
   background-color: var(--gray);
   color: white;
-  font-family: Pompiere;
+  font-family: var(--regularfont);
   font-size: calc(16px + 1vw);
   line-height: calc(1.1em + 0.5vw);
+}
+
+h1,
+h3,
+h5 {
+  font-family: var(--fancyfont);
 }
 
 .page {
@@ -62,7 +70,6 @@ header {
 }
 
 nav {
-  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
   font-size: calc(12px + 1vh);
   grid-area: nav;
   text-transform: uppercase;

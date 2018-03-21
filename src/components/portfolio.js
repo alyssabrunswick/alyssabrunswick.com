@@ -1,7 +1,8 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
+import firebase from 'firebase';
 
-class Portfolio extends React.Component {
+class Work extends React.Component {
   // static propTypes = {};
 
   render() {
@@ -9,4 +10,4 @@ class Portfolio extends React.Component {
   }
 }
 
-export default Portfolio;
+export default Work;

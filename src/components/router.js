@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // MY COMPONENTS
 import Main from './main';
-import Portfolio from './portfolio';
+import Work from './Portfolio';
 import Contact from './contact';
 import Footer from './footer';
 
@@ -16,9 +16,9 @@ const routes = [
     main: () => <Main />
   },
   {
-    path: '/portfolio',
-    sidebar: () => <li>Portfolio</li>,
-    main: () => <Portfolio />
+    path: '/Work',
+    sidebar: () => <li>Work</li>,
+    main: () => <Work />
   },
   {
     path: '/contact',
@@ -28,7 +28,7 @@ const routes = [
 ];
 
 const SiteRouter = () => (
-  <Router>
+  <Router history={browserHistory} onUpdate={hashLinkScroll}>
     <div className="page">
       <header className="full">
         <div className="logo">ab</div>
@@ -38,7 +38,7 @@ const SiteRouter = () => (
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/Portfolio">Portfolio</Link>
+              <Link to="/Work">Work</Link>
             </li>
             <li>
               <Link to="/Contact">Contact</Link>
@@ -46,6 +46,7 @@ const SiteRouter = () => (
           </ul>
         </nav>
       </header>
+
       <main>
         <div>
           {routes.map((route, index) => (
