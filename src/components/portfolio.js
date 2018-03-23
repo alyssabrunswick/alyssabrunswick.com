@@ -1,12 +1,19 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import firebase from 'firebase';
+import PropTypes from 'prop-types';
+// import firebase from 'firebase';
 
 class Work extends React.Component {
-  // static propTypes = {};
+  static propTypes = {
+    projects: PropTypes.object
+  };
 
   render() {
-    return <h1>Work</h1>;
+    return (
+      <page>
+        <h1>Work</h1>
+        {Object.keys(this.props.projects).map(key => <h1>project.name</h1>)}
+      </page>
+    );
   }
 }
 

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // MY COMPONENTS
 import Main from './main';
-import Work from './Portfolio';
+import Work from './portfolio';
 import Contact from './contact';
 import Footer from './footer';
 
@@ -12,23 +12,20 @@ const routes = [
   {
     path: '/',
     exact: true,
-    sidebar: () => <li>Home</li>,
-    main: () => <Main />
+    component: Main
   },
   {
     path: '/Work',
-    sidebar: () => <li>Work</li>,
-    main: () => <Work />
+    component: Work
   },
   {
     path: '/contact',
-    sidebar: () => <li>Contact</li>,
-    main: () => <Contact />
+    component: Contact
   }
 ];
 
 const SiteRouter = () => (
-  <Router history={browserHistory} onUpdate={hashLinkScroll}>
+  <Router>
     <div className="page">
       <header className="full">
         <div className="logo">ab</div>
@@ -54,7 +51,8 @@ const SiteRouter = () => (
               key={index}
               path={route.path}
               exact={route.exact}
-              component={route.main}
+              component={route.component}
+              projects={this.state.projects}
             />
           ))}
         </div>
