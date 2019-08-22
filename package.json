@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "alyssa-brunswick",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Alyssa Brunswick's portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Alyssa Brunswick <alyssa.brunswick@gmail.com>",
   "dependencies": {
     "gatsby": "^2.13.67",
     "gatsby-image": "^2.2.8",
@@ -22,7 +22,8 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio"
   ],
   "license": "MIT",
   "scripts": {
