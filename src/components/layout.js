@@ -8,9 +8,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 
 import Header from "./header";
-import "./layout.scss";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,17 +23,26 @@ const Layout = ({ children }) => {
     }
   `);
 
+  const Main = styled.main`
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 144px);
+    width: clamp(300px, 90vw, 95vw);
+    margin: 0 auto;
+  `;
+  const Footer = styled.footer``;
+
   return (
-    <>
+    <div className="layout">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
-      <footer>© {new Date().getFullYear()}</footer>
-    </>
+      <Main>{children}</Main>
+      <Footer>© {new Date().getFullYear()}</Footer>
+    </div>
   );
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;
