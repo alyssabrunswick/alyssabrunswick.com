@@ -40,7 +40,7 @@
     margin-right: 0.5rem;
     color: var(--c-black);
     font-weight: 900;
-    letter-spacing: -0.125rem;
+    letter-spacing: -0.025rem;
     border: 3px solid currentColor;
     border-radius: 50%;
   }
