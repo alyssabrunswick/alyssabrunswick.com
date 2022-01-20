@@ -1,13 +1,13 @@
 // Tokens
 :root {
 	// (c)olor
-	--c-black: #05091e;
+	--c-black: #222222;
 	--c-blue: #46b4ff;
-	--c-gray: #90aab7;
-	--c-green: #9ef2cb;
+	--c-gray: #bdbdbd;
+	--c-green: #80c17a;
 	--c-pink: #ffb8d9;
 	--c-orange: #ffb7a3;
-	--c-yellow: #ffdace;
+	--c-yellow: #fff4ce;
 	--c-white: #fff;
 
 	// (f)ont
@@ -52,7 +52,7 @@
 	--t-fg: var(--c-black);
 	--t-bg: var(--c-white);
 	--t-subdue: var(--c-gray);
-	--t-active: var(--c-blue);
+	--t-active: var(--c-green);
 }
 
 // Base
