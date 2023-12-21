@@ -1,45 +1,35 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "gatsby": "^2.15.28",
-    "gatsby-image": "^2.2.23",
-    "gatsby-plugin-manifest": "^2.2.20",
-    "gatsby-plugin-offline": "^3.0.11",
-    "gatsby-plugin-react-helmet": "^3.1.10",
-    "gatsby-plugin-sass": "^2.1.17",
-    "gatsby-plugin-sharp": "^2.2.27",
-    "gatsby-source-filesystem": "^2.1.28",
-    "gatsby-transformer-sharp": "^2.2.19",
-    "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
-    "react-helmet": "^5.2.1"
-  },
-  "devDependencies": {
-    "prettier": "^1.18.2"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+	"name": "my-app",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"test": "npm run test:integration && npm run test:unit",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"test:integration": "playwright test",
+		"test:unit": "vitest"
+	},
+	"devDependencies": {
+		"@fontsource/fira-mono": "^4.5.10",
+		"@neoconfetti/svelte": "^1.0.0",
+		"@playwright/test": "^1.28.1",
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.30.0",
+		"prettier": "^3.1.1",
+		"prettier-plugin-svelte": "^3.1.2",
+		"svelte": "^4.2.8",
+		"svelte-check": "^3.6.0",
+		"typescript": "^5.0.0",
+		"vite": "^5.0.3",
+		"vitest": "^1.0.0"
+	},
+	"type": "module"
 }
