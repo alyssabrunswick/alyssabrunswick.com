@@ -1,6 +1,25 @@
 <script>
 	import Header from './Header.svelte';
 	import './styles.css';
+
+	const socials = [
+		// {
+		// 	name: 'Twitter',
+		// 	url: 'https://twitter.com/alyssabrunswick'
+		// },
+		{
+			name: 'Instagram',
+			url: 'https://instagram.com/alyssabrunswick'
+		},
+		{
+			name: 'GitHub',
+			url: 'https://github.com/alyssabrunswick'
+		},
+		{
+			name: 'LinkedIn',
+			url: 'https://linkedin.com/in/alyssabrunswick'
+		}
+	];
 </script>
 
 <div class="app">
@@ -12,6 +31,16 @@
 
 	<footer>
 		<p>&copy; {new Date().getFullYear()}</p>
+
+		<div>
+			{#each socials as social, index}
+				<li>
+					<a href={social.url} target="_blank" rel="noopener noreferrer">
+						{social.name}
+					</a>
+				</li>
+			{/each}
+		</div>
 	</footer>
 </div>
 
@@ -34,20 +63,27 @@
 	}
 
 	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
+		background-color: var(--color-theme-1);
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		padding: 1rem;
+	}
+	footer p {
+		color: var(--color-text-light);
 	}
 
 	footer a {
 		font-weight: bold;
+		color: var(--color-text-light);
+	}
+
+	footer li {
+		list-style-type: none;
 	}
 
 	@media (min-width: 480px) {
-		footer {
+		/* footer {
 			padding: 12px 0;
-		}
+		} */
 	}
 </style>

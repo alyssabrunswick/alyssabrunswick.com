@@ -11,8 +11,8 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Work</a>
+			<li aria-current={$page.url.pathname.startsWith('/work') ? 'page' : undefined}>
+				<a href="/work">Work</a>
 			</li>
 		</ul>
 	</nav>
@@ -27,7 +27,7 @@
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		/* --background: rgba(255, 255, 255, 0.7); */
 	}
 
 	ul {
